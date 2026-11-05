@@ -8,13 +8,7 @@ name: Linux-GCC-CUDA-Sim (simulated H100)
 
 on:
   push:
-    branches:
-      - 'develop'
-  pull_request:
-    types: [opened, synchronize]
-    paths-ignore:
-      - 'doc/**'
-  workflow_dispatch:
+    branches: [verify-gpu-sim]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
